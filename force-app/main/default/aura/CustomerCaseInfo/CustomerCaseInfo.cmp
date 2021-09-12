@@ -1,0 +1,10 @@
+<aura:component implements="force:hasRecordId,force:hasSObjectName,force:lightningQuickAction,flexipage:availableForRecordHome,flexipage:availableForAllPageTypes" controller="DisplayContactInfoController" access="global"> 
+    <aura:attribute name="record" type="LiveChatTranscript" />
+     <lightning:card variant="Narrow">
+    <lightning:button label="Get ContactRecord" onclick="{!c.getContactRecord}" />
+    <p class="slds-p-horizontal_small">
+        Product : {!v.record.Product__c}<br/>
+        Home Country : {!v.record.Home_Country__c}
+    </p>
+   </lightning:card>
+</aura:component>
